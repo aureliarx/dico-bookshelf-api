@@ -146,7 +146,7 @@ const getBookbyIdHandler = (req, h) => {
         };
     }
 
-    // Failed response
+    // Failed response: Couldn't find book
     const res = h.response({
         status: 'fail',
         message: 'Buku tidak ditemukan'
@@ -217,7 +217,7 @@ const updateBookbyIdHandler = (req, h) => {
         return res;
     }
 
-    // Failed response for another reason
+    // Failed response: Couldn't find book
     const res = h.response({
         status: 'fail',
         message: 'Gagal memperbarui buku. Id tidak ditemukan'
